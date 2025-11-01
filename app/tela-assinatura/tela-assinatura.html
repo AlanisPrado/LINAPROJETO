@@ -1,0 +1,119 @@
+<div class="container">
+  <h1>Assine o Lina Premium</h1>
+  <p class="subtitle">Tenha acesso completo a todas as funcionalidades</p>
+
+  <div class="content-box">
+    <!-- Lado esquerdo: Plano Premium -->
+    <div class="left">
+      <div class="plan-box">
+        <div class="plan-header">
+          <span class="star">⭐</span>
+          <h2>Plano Premium</h2>
+        </div>
+        <p class="price">R$ 5,99 <span>/mês</span></p>
+        <p class="cancel-text">Cancele quando quiser</p>
+
+        <ul class="benefits">
+          <li>✅ Crie cardápios semanais personalizados</li>
+          <li>✅ Gere listas de compras automáticas</li>
+          <li>✅ Acesse receitas com quantidades detalhadas</li>
+          <li>✅ Download da lista de compras em PDF</li>
+          <li>✅ Receitas adaptadas para suas restrições</li>
+          <li>✅ Acesso à lista de nutricionistas</li>
+          <li>✅ Atualizações constantes de receitas</li>
+        </ul>
+
+        <p class="secure">🔒 Pagamento 100% seguro</p>
+      </div>
+    </div>
+
+    <!-- Lado direito: Dados do Cartão -->
+    <div class="right">
+      <div class="card-box">
+        <h3>💳 Dados do Cartão</h3>
+
+        <label for="card-number">Número do Cartão</label>
+        <input id="card-number" [(ngModel)]="cardNumber" (input)="formatCardNumber($event)"
+          placeholder="0000 0000 0000 0000" maxlength="19" />
+        <p class="error" [hidden]="!errors.cardNumber">{{ errors.cardNumber }}</p>
+
+        <label for="card-name">Nome no Cartão</label>
+        <input id="card-name" [(ngModel)]="cardName" placeholder="NOME COMO ESTÁ NO CARTÃO" />
+        <p class="error" [hidden]="!errors.cardName">{{ errors.cardName }}</p>
+
+        <div class="row">
+          <div class="col">
+            <label for="validade">Validade</label>
+            <input id="validade" [(ngModel)]="validade" (input)="formatValidade($event)" placeholder="MM/AA"
+              maxlength="5" />
+            <p class="error" [hidden]="!errors.validade">{{ errors.validade }}</p>
+          </div>
+          <div class="col">
+            <label for="cvv">CVV</label>
+            <input id="cvv" [(ngModel)]="cvv" placeholder="000" maxlength="3" />
+            <p class="error" [hidden]="!errors.cvv">{{ errors.cvv }}</p>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <p>📅 Você será cobrado <b>R$ 5,99</b> hoje e todo dia 23 de cada mês até cancelar.</p>
+        </div>
+
+        <button class="subscribe-btn" (click)="assinar()">Assinar Agora - R$ 5,99/mês</button>
+
+        <p class="terms">
+          Ao assinar, você concorda com nossos <a href="#">Termos de Serviço</a> e <a href="#">Política de
+            Privacidade</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <section class="benefits-section">
+    <h2>Por que assinar?</h2>
+    <div class="benefits-container">
+      <div class="benefit-item">
+        <div class="icon-box">
+          <i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+              <path d="M5 3v4" />
+              <path d="M19 17v4" />
+              <path d="M3 5h4" />
+              <path d="M17 19h4" />
+            </svg>
+          </i>
+        </div>
+        <h3>Planejamento Fácil</h3>
+        <p>Organize suas refeições de forma simples e rápida</p>
+      </div>
+
+      <div class="benefit-item">
+        <div class="icon-box">
+          <i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </i>
+        </div>
+        <h3>Receitas Seguras</h3>
+        <p>Todas adaptadas para suas restrições alimentares</p>
+      </div>
+
+      <div class="benefit-item">
+        <div class="icon-box">
+          <i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          </i>
+        </div>
+        <h3>Melhor Custo-Benefício</h3>
+        <p>Apenas R$ 5,99 por mês, menos que um café</p>
+      </div>
+    </div>
+  </section>
+</div>

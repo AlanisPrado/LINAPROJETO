@@ -1,0 +1,75 @@
+<div class="page-wrap">
+  <div class="logo-container">
+    <div class="logo-icon">
+      <img src="https://i.imgur.com/W7BLjsE.png" alt="Logo Lina" class="logo-img" />
+      <h1 class="logo-title">Lina</h1>
+    </div>
+    <p class="logo-subtitle">Planejamento alimentar para uma vida mais saudável</p>
+  </div>
+  <div class="login-container">
+    <div class="tabs">
+      <button class="tab" [class.active]="activeTab === 'login'" (click)="activeTab = 'login'">
+        Entrar
+      </button>
+      <button class="tab" [class.active]="activeTab === 'register'" (click)="activeTab = 'register'">
+        Registrar
+      </button>
+    </div>
+
+    @if (activeTab === 'login') {
+    <form (submit)="handleLogin($event)" class="form">
+      <div class="field">
+        <label for="login-email">Email</label>
+        <input id="login-email" type="email" placeholder="seu@email.com" [(ngModel)]="loginEmail" name="loginEmail"
+          required />
+      </div>
+
+      <div class="field">
+        <label for="login-password">Senha</label>
+        <input id="login-password" type="password" placeholder="••••••••" [(ngModel)]="loginPassword"
+          name="loginPassword" required />
+        <a href="#" class="forgot-link" (click)="$event.preventDefault(); onForgotPassword()">
+          Esqueci a senha
+        </a>
+      </div>
+
+      <button type="submit" class="primary-btn-entrar">Entrar</button>
+    </form>
+    }
+
+    @if (activeTab === 'register') {
+    <form (submit)="handleRegister($event)" class="form">
+      <div class="field">
+        <label for="register-name">Nome Completo</label>
+        <input id="register-name" type="text" placeholder="Maria Silva" [(ngModel)]="registerName" name="registerName"
+          required />
+      </div>
+
+      <div class="field">
+        <label for="register-email">Email</label>
+        <input id="register-email" type="email" placeholder="seu@email.com" [(ngModel)]="registerEmail"
+          name="registerEmail" required />
+      </div>
+
+      <div class="field">
+        <label for="register-password">Senha</label>
+        <input id="register-password" type="password" placeholder="••••••••" [(ngModel)]="registerPassword"
+          name="registerPassword" required />
+      </div>
+
+      <label class="restricoes-label" for="text"> <Strong>Restrições Alimentares</Strong></label>
+
+      <div class="checkbox-group">
+        <div class="checkbox-item">
+          <input type="checkbox" id="diabetic" [(ngModel)]="isDiabetic" name="isDiabetic" />
+          <label for="diabetic">Diabético(a)</label>
+        </div>
+      </div>
+
+      <button type="submit" class="primary-btn-registrar">Criar conta</button>
+    </form>
+    }
+  </div>
+
+  <p class="footer-text">Organize suas refeições e cuide da sua saúde com Lina</p>
+</div>
