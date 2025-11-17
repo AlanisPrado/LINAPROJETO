@@ -1,0 +1,44 @@
+<div class="page-wrap">
+  <div class="logo-container">
+    <div class="logo-icon">
+      <img src="https://i.imgur.com/W7BLjsE.png" alt="Logo Lina" class="logo-img" />
+      <h1 class="logo-title">Lina</h1>
+    </div>
+    <p class="logo-subtitle">Planejamento alimentar para uma vida mais saudável</p>
+  </div>
+
+  <div class="login-container">
+    <h2 class="titulo">Recuperar senha</h2>
+    <p class="descricao">
+      Digite o seu e-mail cadastrado e enviaremos um link para redefinir sua senha.
+    </p>
+
+    <form (submit)="handleReset($event)" class="form">
+      <div class="field">
+        <label for="reset-email">Email</label>
+        <input
+          id="reset-email"
+          type="email"
+          placeholder="seu@email.com"
+          [(ngModel)]="email"
+          name="email"
+          required
+        />
+      </div>
+
+      <button type="submit" class="primary-btn-entrar">Enviar link de recuperação</button>
+    </form>
+
+    @if (mensagemEnviada) {
+    <div class="mensagem-sucesso">
+      <p>Um link de recuperação foi enviado para <strong>{{ email }}</strong> se for válido.</p>
+    </div>
+    }
+
+    <div class="voltar-container">
+      <a routerLink="/login" class="forgot-link">← Voltar ao login</a>
+    </div>
+  </div>
+
+  <p class="footer-text">Organize suas refeições e cuide da sua saúde com Lina</p>
+</div>

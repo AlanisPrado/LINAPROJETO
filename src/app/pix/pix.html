@@ -1,0 +1,43 @@
+<div class="pix-container">
+  <h2 class="title">Pagamento via PIX</h2>
+  <p class="subtitle">Assinatura Mensal — <strong>R$ 5,99</strong></p>
+
+  <div class="pix-card">
+    <div class="pix-left">
+      <h3 class="section-title">Detalhes do Pagamento</h3>
+
+      <div class="pix-line">
+        <span class="label">Descrição</span>
+        <span>Assinatura Mensal</span>
+      </div>
+
+      <div class="pix-line">
+        <span class="label">Valor</span>
+        <span class="price">R$ 5,99</span>
+      </div>
+
+      <div class="pix-line">
+        <span class="label">Tempo restante</span>
+        <span class="countdown" id="countdown" #countdown>15:00</span>
+      </div>
+
+      <div class="pix-code" id="pixCode" #pixCode>
+        Gerando código PIX...
+      </div>
+
+      <div class="actions">
+        <button type="button" class="btn-outline" id="copyBtn" (click)="copyPix()">Copiar código PIX</button>
+        <button type="button" class="btn-solid" id="dlBtn" (click)="downloadQr()">Baixar QR Code</button>
+      </div>
+    </div>
+
+    <div class="pix-right">
+      <canvas id="qrcanvas" #qrcanvas width="200" height="200" aria-label="QR Code do PIX (exemplo)"></canvas>
+      <div class="qr-label">Escaneie com o app do seu banco</div>
+    </div>
+  </div>
+
+  <p class="disclaimer">
+    🔒 Pagamento 100% seguro — Este é um ambiente de teste, o código PIX é ilustrativo.
+  </p>
+</div>
