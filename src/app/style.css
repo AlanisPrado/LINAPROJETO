@@ -1,0 +1,170 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f9fbfd;
+  margin: 0;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 1px solid #e4e4e4;
+  background-color: #fff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 32px;
+  height: 32px;
+}
+
+.nome {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00b894;
+}
+
+.premium {
+  background: #25d366;
+  color: white;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.usuario {
+  font-size: 15px;
+  color: #555;
+}
+
+.menu {
+  display: flex;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 40px;
+  gap: 25px;
+}
+
+.menu a {
+  color: #444;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.menu a:hover, .menu a.ativo {
+  color: #00b894;
+  font-weight: 600;
+}
+
+.conteudo {
+  padding: 40px;
+}
+
+.conteudo h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.filtros {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.campo select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.btn-profissionais {
+  background: #00b894;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #222;
+}
+
+.especialidade {
+  color: #777;
+  font-size: 14px;
+}
+
+.card p {
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.card i {
+  color: #00b894;
+  margin-right: 5px;
+}
+
+.rating {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #f1c40f;
+  font-weight: bold;
+}
+
+.btn-contato {
+  background: #00b894;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-contato:hover {
+  background: #009d7f;
+}
