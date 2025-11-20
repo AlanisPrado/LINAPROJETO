@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="dia-card">
+    <div *ngFor="let dia of diasSemana; index as i">
+      <h1 *ngIf="i === 0">Monte seu Cardápio Semanal</h1>
+      <p class="subtitle" *ngIf="i === 0">
+        Selecione uma opção de refeição para cada período do dia em cada dia da semana
+      </p>
+
+      <div class="dia-header">
+        <h2>{{ dia.nome }}</h2>
+        <span class="ref-count">
+          {{ dia.refeicoesSelecionadas }}/{{ dia.periodos.length }} refeições
+        </span>
+      </div>
+
+      <div class="periodos-grid">
+        <div class="periodo" *ngFor="let periodo of dia.periodos">
+          <div class="periodo-header">
+            <div class="periodo-icon">{{ periodo.icone }}</div>
+            <h3>{{ periodo.nome }}</h3>
+          </div>
+
+          <div class="opcoes">
+            <div
+              class="opcao-card"
+              *ngFor="let opcao of periodo.opcoes"
+              [ngClass]="{ selected: opcao.selecionado }"
+              (click)="selecionarOpcao(dia, periodo, opcao)"
+              (dblclick)="deselecionarOpcao(dia, periodo, opcao, $event)"
+            >
+              <h4>{{ opcao.nome }}</h4>
+              <p>{{ opcao.descricao }}</p>
+              <span class="check" *ngIf="opcao.selecionado">✔</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

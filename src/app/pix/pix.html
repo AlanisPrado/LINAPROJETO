@@ -1,0 +1,50 @@
+<div class="pix-container">
+  <h2 class="title">Pagamento via PIX</h2>
+  <p class="subtitle">Assinatura Mensal — <strong>R$ 5,99</strong></p>
+
+  <div class="pix-card">
+    <div class="pix-left">
+      <h3 class="section-title">Detalhes do Pagamento</h3>
+
+      <div class="pix-line">
+        <span class="label">Descrição</span>
+        <span>Assinatura Mensal</span>
+      </div>
+
+      <div class="pix-line">
+        <span class="label">Valor</span>
+        <span class="price">R$ 5,99</span>
+      </div>
+
+      <div class="pix-line">
+        <span class="label">Tempo restante</span>
+        <span class="countdown" #countdown>15:00</span>
+      </div>
+
+      <div class="pix-code" #pixCode>
+        00020126660014BR.GOV.BCB.PIX0136bruno@example.com52040000530398654065.995802BR5909Assinante6009Sao Paulo62070503***6304ABCD
+      </div>
+
+      <div class="actions">
+        <button class="btn-outline" (click)="copyPix()">Copiar código PIX</button>
+        <button class="btn-solid" (click)="showAndDownloadQr()">Baixar QR Code</button>
+      </div>
+    </div>
+
+    <div class="pix-right">
+      <img *ngIf="showQrCode" [src]="qr" alt="QR Code do PIX">
+      <div *ngIf="showQrCode" class="qr-label">Escaneie com o app do seu banco</div>
+      <div *ngIf="!showQrCode" class="qr-placeholder">
+        <p>Clique no botão para gerar e baixar o QR Code</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="disclaimer">
+    🔒 Pagamento 100% seguro — Este é um ambiente de teste, o código PIX é ilustrativo.
+  </p>
+
+  <div class="voltar-container">
+    <button class="voltar-btn" (click)="voltar()">Voltar</button>
+  </div>
+</div>

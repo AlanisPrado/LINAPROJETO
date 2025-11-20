@@ -1,0 +1,55 @@
+<div class="container">
+  <h2>Nutricionistas Especializados</h2>
+  <p>Encontre nutricionistas especializados em diabetes, doença celíaca e intolerâncias alimentares</p>
+
+  <div class="filters-container">
+      <div class="filter-group">
+          <label>Estado</label>
+          <select [(ngModel)]="estadoSelecionado" (change)="filtrarProfissionais()">
+              <option *ngFor="let estado of estados" [ngValue]="estado">{{ estado }}</option>
+          </select>
+      </div>
+
+      <div class="filter-group">
+          <label>Cidade</label>
+          <select [(ngModel)]="cidadeSelecionada" (change)="filtrarProfissionais()">
+              <option *ngFor="let cidade of cidades" [ngValue]="cidade">{{ cidade }}</option>
+          </select>
+      </div>
+      <div class="filter-group">
+          <label>Avaliação mínima</label>
+          <select [(ngModel)]="avaliacaoMinima" (change)="filtrarProfissionais()">
+              <option [ngValue]="0">Todas</option>
+              <option [ngValue]="5">5 ★</option>
+              <option [ngValue]="4">4 ★ ou mais</option>
+              <option [ngValue]="3">3 ★ ou mais</option>
+          </select>
+      </div>
+
+
+      <div class="count-box">
+          <span>{{ nutricionistasFiltrados.length }} profissionais</span>
+      </div>
+  </div>
+
+  <div class="profissionais-grid">
+      <div class="card" *ngFor="let nutri of nutricionistasFiltrados">
+          <div class="card-header">
+              <div class="name-specialty">
+                  <h3>{{ nutri.nome }}</h3>
+                  <p class="especialidade">{{ nutri.especialidade }}</p>
+              </div>
+              <div class="rating">
+                  <span class="star">★</span> {{ nutri.avaliacao }}
+              </div>
+          </div>
+
+          <p class="localidade">{{ nutri.localidade }}</p>
+          <p class="contato">{{ nutri.telefone }}</p>
+          <p class="contato">{{ nutri.email }}</p>
+          <p class="pacientes">{{ nutri.pacientesAtendidos }}+ pacientes atendidos</p>
+
+          <button class="btn-contato">Entrar em Contato</button>
+      </div>
+  </div>
+</div>

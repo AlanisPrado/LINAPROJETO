@@ -1,0 +1,30 @@
+<div class="boleto-container">
+  <h2>Pagamento com Boleto</h2>
+  <p>Preencha os dados abaixo:</p>
+
+  <div>
+    <label>Nome completo</label>
+    <input [(ngModel)]="nome" placeholder="Seu nome" />
+
+    <label>CPF</label>
+    <input [(ngModel)]="cpf" placeholder="000.000.000-00" maxlength="14" />
+
+    <label>E-mail</label>
+    <input [(ngModel)]="email" placeholder="seuemail@gmail.com" />
+
+    <button class="gerar-btn" (click)="gerarBoleto()">Gerar Boleto</button>
+  </div>
+
+  <div [hidden]="!boletoGerado" class="boleto-imagem">
+    <h3>Boleto Gerado para {{ nome }}</h3>
+    <p>Confira os dados e efetue o pagamento.</p>
+    <img [src]='imgBoleto' alt="boleto">
+  <div class="icon-box">
+</div>
+  </div>
+
+  <div class="voltar-container">
+    <button class="voltar-btn" (click)="voltar()">Voltar</button>
+  </div>
+</div>
+
