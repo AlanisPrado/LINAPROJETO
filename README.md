@@ -1,8 +1,10 @@
-#  **LINA PROJETO**
+
+
+# **LINA PROJETO**
 
 O **Lina** é um projeto desenvolvido para auxiliar pessoas com restrições alimentares na rotina diária.  
-A plataforma recomenda **pratos personalizados** para cada refeição, de acordo com as necessidades do usuário.  
-Ao final, o sistema também gera automaticamente uma **lista de ingredientes**, facilitando o processo de compras.
+A plataforma recomenda **pratos personalizados** para cada refeição, de acordo com as necessidades individuais do usuário.  
+Ao final, o sistema gera automaticamente uma **lista de ingredientes**, facilitando o processo de compras.
 
 ----------
 
@@ -22,6 +24,7 @@ node --version
 npm --version
 
 ```
+
 ----------
 
 ## 🚀 **Instalação e Execução**
@@ -49,7 +52,7 @@ npm install
 
 ```
 
-Este comando instalará todas as dependências necessárias, incluindo o Angular 20.
+Este comando instalará todas as dependências necessárias, incluindo Angular 20 e bibliotecas adicionais.
 
 ----------
 
@@ -71,7 +74,7 @@ http://localhost:4200
 
 ```
 
-O navegador deve abrir automaticamente. Caso isso não aconteça, acesse o endereço manualmente.
+O navegador normalmente abrirá automaticamente. Caso isso não ocorra, acesse manualmente.
 
 ----------
 
@@ -79,10 +82,11 @@ O navegador deve abrir automaticamente. Caso isso não aconteça, acesse o ender
 
 -   **Angular** 20.2.2
     
--   **TypeScript** 
+-   **TypeScript**
     
--   **Bootstrap** 
+-   **Bootstrap**
     
+
 ----------
 
 ## 📁 **Estrutura do Projeto**
@@ -97,11 +101,11 @@ LINAPROJETO-main/
 │   │   ├── registrar/            # Tela de cadastro
 │   │   ├── home/                 # Página inicial
 │   │   ├── lista/                # Lista de itens
-│   │   ├── meu-cardapio/         # Meu cardápio
-│   │   ├── nutricionistas/       # Consultar nutricionistas
-│   │   ├── pix/                  # Tela de pagamento PIX
-│   │   ├── tela-assinatura/      # Tela de assinatura
-│   │   └── services/             # Serviços da aplicação
+│   │   ├── meu-cardapio/         # Meu cardápio personalizado
+│   │   ├── nutricionistas/       # Consulta de nutricionistas
+│   │   ├── pix/                  # Pagamento via PIX
+│   │   ├── tela-assinatura/      # Área de assinatura
+│   │   └── services/             # Serviços e lógica da aplicação
 │   ├── index.html
 │   └── main.ts
 ├── public/                       # Arquivos estáticos
@@ -110,6 +114,7 @@ LINAPROJETO-main/
 └── tsconfig.json                 # Configuração do TypeScript
 
 ```
+
 ----------
 
 ## 🎯 **Funcionalidades**
@@ -120,7 +125,7 @@ LINAPROJETO-main/
     
 -   ✅ Login
     
--   ✅ Criar cardápio
+-   ✅ Criar cardápio personalizado
     
 -   ✅ Exibir cardápio
     
