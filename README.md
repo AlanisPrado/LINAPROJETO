@@ -1,4 +1,4 @@
-# LINAPROJETO
+# LINA PROJETO
 
 ## Instalação
 1. Clone o repositório: `git clone https://github.com/usuario/meu-projeto.git`
